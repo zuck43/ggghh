@@ -21,9 +21,8 @@ def trigger_dispatch():
         "User-Agent": "StarX-CronProxy"
     }
     data = {
-        "event_type": "manual_trigger"
+  "event_type": "external-triggered"
     }
-
     res = requests.post(url, headers=headers, json=data)
     return jsonify({
         "status": res.status_code,
